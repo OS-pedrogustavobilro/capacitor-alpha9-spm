@@ -15,7 +15,8 @@
   "dependencies": {
     "@capacitor/android": "next",
     "@capacitor/core": "next",
-    "@capacitor/ios": "next"
+    "@capacitor/ios": "next",
+    "cordova-plugin-contacts": "https://github.com/OutSystems/cordova-plugin-contacts#outsystems"
   },
   "devDependencies": {
     "@capacitor/cli": "next",
