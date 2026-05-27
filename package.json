@@ -15,9 +15,7 @@
   "dependencies": {
     "@capacitor/android": "next",
     "@capacitor/core": "next",
-    "@capacitor/ios": "next",
-    "@capacitor/camera": "latest",
-    "@capacitor/splash-screen": "latest"
+    "@capacitor/ios": "next"
   },
   "devDependencies": {
     "@capacitor/cli": "next",
