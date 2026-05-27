@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Cap9Alpha SPM</string>
+    <string name="title_activity_main">Cap9Alpha SPM</string>
+    <string name="package_name">com.outsystems.rd.cap9alphaspm</string>
+    <string name="custom_url_scheme">com.outsystems.rd.cap9alphaspm</string>
+</resources>

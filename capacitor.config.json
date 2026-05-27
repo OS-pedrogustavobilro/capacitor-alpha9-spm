@@ -1,0 +1,10 @@
+{
+  "appId": "com.outsystems.rd.cap9alphaspm",
+  "appName": "Cap9Alpha SPM",
+  "webDir": "dist",
+  "plugins": {
+    "SplashScreen": {
+      "launchAutoHide": false
+    }
+  }
+}
