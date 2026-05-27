@@ -13,12 +13,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@capacitor/android": "9.0.0-alpha.1",
-    "@capacitor/core": "9.0.0-alpha.1",
-    "@capacitor/ios": "9.0.0-alpha.1"
+    "@capacitor/android": "next",
+    "@capacitor/core": "next",
+    "@capacitor/ios": "next"
   },
   "devDependencies": {
-    "@capacitor/cli": "9.0.0-alpha.1",
+    "@capacitor/cli": "next",
     "vite": "^7.3.1"
   },
   "author": "",

@@ -6,8 +6,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/ionic-team/capacitor-swift-pm.git",
       "state" : {
-        "revision" : "13a67f0c53952651ccbfc52208225bc3a6580888",
-        "version" : "9.0.0-alpha.1"
+        "revision" : "2ef806c38ff71fad4fa6ce05f775076999e8bbdc",
+        "version" : "9.0.0-alpha.2"
       }
     }
   ],
