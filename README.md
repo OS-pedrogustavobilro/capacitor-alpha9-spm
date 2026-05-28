@@ -1,12 +1,15 @@
-## Crash
+## Issue
 
-Without a cordova plugin the iOS SPM app crashes on opening
+With Capacitor Plugins but no cordova plugin the iOS SPM app cannot resolve the dependencies due to a duplicated comma. Running `xcodebuild -resolvePackageDependencies -project ios/App/App.xcodeproj` highlights the error:
 
 ```
-ibrary not loaded: @rpath/Cordova.framework/Cordova
-  Referenced from: <8D13AE37-5ABE-3673-9D6D-E20EF9EF3B08> /private/var/containers/Bundle/Application/0346EA7B-282A-4ADA-A0C8-31BBE777EA8E/App.app/Frameworks/Capacitor.framework/Capacitor
-  Reason: tried: '/usr/lib/swift/Cordova.framework/Cordova' (no such file, not in dyld cache), '/private/preboot/Cryptexes/OS/usr/lib/swift/Cordova.framework/Cordova' (no such file), '/private/var/containers/Bundle/Application/0346EA7B-282A-4ADA-A0C8-31BBE777EA8E/App.app/Frameworks/Cordova.framework/Cordova' (no such file), '/private/var/containers/Bundle/Application/0346EA7B-282A-4ADA-A0C8-31BBE777EA8E/App.app/Frameworks/Capacitor.framework/Frameworks/Cordova.framework/Cordova' (no such file), '/usr/lib/swift/Cordova.framework/Cordova' (no such file, not in dyld cache), '/private/preboot/Cryptexes/OS/usr/lib/swift/Cordova.framework/Cordova' (no such file), '/Users/(username)/Library/Developer/Xcode/DerivedData/App-hkgfjywqypezxtfqhpccpanyslng/Build/Products/Debug-iphoneos
-dyld config: DYLD_LIBRARY_PATH=/usr/lib/system/introspection DYLD_INSERT_LIBRARIES=/usr/lib/libLogRedirect.dylib:/usr/lib/libBacktraceRecording.dylib:/usr/lib/libMainThreadChecker.dylib:/usr/lib/libRPAC.dylib:/usr/lib/libViewDebuggerSupport.dylib
+capacitor-alpha9-spm/ios/App/CapApp-SPM/Package.swift:22:76: error: expected expression in container literal
+20 |             name: "CapApp-SPM",
+21 |             dependencies: [
+22 |                 .product(name: "Capacitor", package: "capacitor-swift-pm"),,
+   |                                                                            `- error: expected expression in container literal
+23 |                 .product(name: "CapacitorDialog", package: "CapacitorDialog"),
+24 |                 .product(name: "CapacitorNetwork", package: "CapacitorNetwork")
 ```
 
 ## Created with Capacitor Create App
