@@ -17,7 +17,8 @@
     "@capacitor/core": "next",
     "@capacitor/ios": "next",
     "@capacitor/dialog": "8.0.2-dev-2523-20260508T123401.0",
-    "@capacitor/network": "8.0.2-dev-2523-20260508T123347.0"
+    "@capacitor/network": "8.0.2-dev-2523-20260508T123347.0",
+    "cordova-plugin-contacts": "https://github.com/OutSystems/cordova-plugin-contacts#outsystems"
   },
   "devDependencies": {
     "@capacitor/cli": "next",

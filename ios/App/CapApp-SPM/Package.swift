@@ -13,15 +13,17 @@ let package = Package(
     dependencies: [
         .package(url: "https://github.com/ionic-team/capacitor-swift-pm.git", exact: "9.0.0-alpha.2"),
         .package(name: "CapacitorDialog", path: "../../../node_modules/@capacitor/dialog"),
-        .package(name: "CapacitorNetwork", path: "../../../node_modules/@capacitor/network")
+        .package(name: "CapacitorNetwork", path: "../../../node_modules/@capacitor/network"),
+        .package(name: "CordovaPluginContacts", path: "../../capacitor-cordova-ios-plugins/sources/CordovaPluginContacts")
     ],
     targets: [
         .target(
             name: "CapApp-SPM",
             dependencies: [
-                .product(name: "Capacitor", package: "capacitor-swift-pm"),,
+                .product(name: "Capacitor", package: "capacitor-swift-pm"),                .product(name: "Cordova", package: "capacitor-swift-pm"),
                 .product(name: "CapacitorDialog", package: "CapacitorDialog"),
-                .product(name: "CapacitorNetwork", package: "CapacitorNetwork")
+                .product(name: "CapacitorNetwork", package: "CapacitorNetwork"),
+                .product(name: "CordovaPluginContacts", package: "CordovaPluginContacts")
             ]
         )
     ]
