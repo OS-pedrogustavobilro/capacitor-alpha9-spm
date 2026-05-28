@@ -1,3 +1,6 @@
+import { Dialog } from '@capacitor/dialog';
+import { Network } from '@capacitor/network';
+
 window.customElements.define(
   'capacitor-welcome',
   class extends HTMLElement {
@@ -49,6 +52,11 @@ window.customElements.define(
       main pre {
         white-space: pre-line;
       }
+      .plugin-result {
+        margin-top: 8px;
+        font-size: 0.85em;
+        color: #333;
+      }
     </style>
     <div>
       <capacitor-welcome-titlebar>
@@ -69,9 +77,28 @@ window.customElements.define(
           on using native features, building plugins, and more.
         </p>
         <a href="https://capacitorjs.com" target="_blank" class="button">Read more</a>
+        <hr>
+        <h2>Plugin Tests</h2>
+        <button class="button" id="btn-dialog">Test Dialog</button>
+        <br><br>
+        <button class="button" id="btn-network">Test Network</button>
+        <p class="plugin-result" id="network-result"></p>
       </main>
     </div>
     `;
+
+      root.getElementById('btn-dialog').addEventListener('click', async () => {
+        await Dialog.alert({
+          title: 'Dialog Plugin',
+          message: 'Hello from @capacitor/dialog!',
+        });
+      });
+
+      root.getElementById('btn-network').addEventListener('click', async () => {
+        const status = await Network.getStatus();
+        root.getElementById('network-result').textContent =
+          `Connected: ${status.connected} | Type: ${status.connectionType}`;
+      });
     }
   },
 );
