@@ -15,10 +15,11 @@
   "dependencies": {
     "@capacitor/android": "next",
     "@capacitor/core": "next",
-    "@capacitor/ios": "next"
+    "@capacitor/ios": "next",
+    "@capacitor/app": "^8.0.0"
   },
   "devDependencies": {
-    "@capacitor/cli": "next",
+    "@capacitor/cli": "file:capacitor-cli-9.0.0-alpha.3-RMET-5253.tgz",
     "vite": "^7.3.1"
   },
   "author": "",
