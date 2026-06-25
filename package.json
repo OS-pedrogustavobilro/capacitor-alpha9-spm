@@ -13,13 +13,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@capacitor/android": "next",
-    "@capacitor/core": "next",
-    "@capacitor/ios": "next",
-    "@capacitor/app": "^8.0.0"
+    "@capacitor/android": "9.0.0-alpha.5",
+    "@capacitor/core": "9.0.0-alpha.5",
+    "@capacitor/ios": "9.0.0-alpha.5",
+    "@capacitor/app": "9.0.0-alpha.1"
   },
   "devDependencies": {
-    "@capacitor/cli": "file:capacitor-cli-9.0.0-alpha.3-RMET-5253.tgz",
+    "@capacitor/cli": "9.0.0-alpha.5",
     "vite": "^7.3.1"
   },
   "author": "",
